@@ -1,0 +1,4 @@
+<h1>Tadpoles</h1>
+<% @tadpoles.each do |tadpole| %>
+  <%= link_to tadpole.name, tadpole_path(tadpole) %><br>
+<% end %>

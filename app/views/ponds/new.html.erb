@@ -1,0 +1,23 @@
+<h1>Create a new pond</h1> 
+<%= form_for @pond do |p| %>
+  <%= p.label :name, 'Name' %>
+  <%= p.text_field :name %>
+  <%= p.label :water_type, 'Water Type' %>
+  <%= p.text_field :water_type %>
+  <%= p.submit %>
+<% end %>
+<%= link_to "Cancel", ponds_path %>
+
+<!-- old HTML way of doing the form -->
+<% if false %>
+<h1>Create a new pond</h1>
+<form action="/ponds" method="post">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="pond[name]">
+  <label for="water_type">Water type</label>
+  <input type="text" id="water_type" name="pond[water_type]">
+  <input type="submit" value="create">
+</form><br>
+<a href="/ponds">Cancel</a>
+<% end %>
+

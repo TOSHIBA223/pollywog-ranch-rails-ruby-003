@@ -1,0 +1,21 @@
+<h1>Edit pond</h1> 
+<%= form_for @pond do |p| %>
+  <%= p.label :name, 'Name' %>
+  <%= p.text_field :name %>
+  <%= p.label :water_type, 'Water Type' %>
+  <%= p.text_field :water_type %>
+  <%= p.submit %>
+<% end %>
+<a href="/ponds">Cancel</a>
+
+<% if false %>
+<h1>Edit <%= @pond.name %></h1>
+<form action="/ponds/<%= @pond.id %>" method="get">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="pond[name]" value="<%= @pond.name %>">
+  <label for="water_type">Water type</label>
+  <input type="text" id="water_type" name="pond[water_type]" value="<%= @pond.water_type %>">
+  <input type="submit" value="update">
+</form><br>
+<a href="/ponds">Cancel</a>
+<% end %>

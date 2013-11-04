@@ -1,0 +1,9 @@
+<h1><%= @tadpole.name %>Tadpole</h1>
+<p>color: <%= @tadpole.color %></p>
+<p>parent: <a href="/frogs/<%= @tadpole.frog.id %>"><%= @tadpole.frog.name %></a></p>
+<p>lives: <a href="/ponds/<%= @tadpole.frog.pond_id %>"><%= @tadpole.frog.pond.name %></a></p>
+<p><strong><a href="/tadpoles/<%= @tadpole.id %>/evolve">Evolve to frog</a></strong></p>
+
+<%= link_to "Back", tadpoles_path %> | 
+<%= link_to "Edit", edit_tadpole_path %> | 
+<%= link_to 'Destroy', @tadpole, method: :delete, data: { confirm: 'Are you sure?' } %>
