@@ -1,4 +1,3 @@
-require 'pry'
 class FrogsController < ApplicationController
   before_action :set_frog, only: [:show, :edit, :update, :destroy]
 
